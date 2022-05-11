@@ -1,0 +1,78 @@
+﻿<Window x:Class="Lib.MainWindow"
+        ResizeMode="NoResize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lib"
+        mc:Ignorable="d"
+        Title="Game Lib Tool" Height="421" Width="600" 
+        WindowStyle="SingleBorderWindow"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+
+        <ListBox Name="ItemListBox"
+                 Grid.Column="1"
+                 Grid.RowSpan="6"
+                 Margin="10,10,25,10"
+                 >
+        </ListBox>
+
+        <TextBox x:Name="Search_InputBox"
+                 VerticalAlignment="top"
+                 HorizontalAlignment="Center"
+                 Grid.Column="0"
+                 Grid.Row="0"
+                 Margin="4,10,4,4"
+                 TextWrapping="Wrap"
+                 Width="250"
+                 FontSize="15" 
+                 />
+        <Button x:Name="SearchBtn"
+                Grid.Column="0"
+                Grid.Row="1"
+                Click="SearchBtn_Click"
+                Content="Search" Margin="10,0,4,4" 
+                >
+        </Button>
+
+        <Button x:Name="FolderBtn"
+                Grid.Row="6"
+                Grid.Column="0"
+                Click="FolderBtn_Click"
+                Content="Folder" Margin="10,0,4,10">
+        </Button>
+        <CheckBox x:Name="GbCheck"
+                  Content="GB" 
+                  Grid.Column="0"
+                  HorizontalAlignment="Left"
+                  Grid.Row="2" Margin="10,0,0,0"/>
+  
+        <CheckBox x:Name="GbcCheck" 
+                  Content="GBC" 
+                  Grid.Column="0"
+                  HorizontalAlignment="Center"
+                  Grid.Row="2"/>
+        <CheckBox x:Name="GbaCheck" 
+                  Content="GBA"
+                  Grid.Column="0"
+                  HorizontalAlignment="Right"
+                  Grid.Row="2" Margin="0,0,4,0"
+                  />
+
+
+    </Grid>
+</Window>
