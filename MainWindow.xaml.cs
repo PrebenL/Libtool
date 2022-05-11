@@ -85,10 +85,18 @@ namespace Lib
                             System.ComponentModel.ListSortDirection.Ascending));
                     }
 
-                    SecWin.Show();
+                    
                 }
                 
             }
+            if (SecWin.ItemsBox.Items.Count > 0)
+            {
+                SecWin.Show();
+            }
+            else {
+                MessageBox.Show("No matches found.", "Warning");
+            }
+            
         }
     }
 }
